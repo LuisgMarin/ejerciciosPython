@@ -1,5 +1,14 @@
 """"  Definir una función que calcule la longitud de una lista o una cadena dada. (Es cierto que
 python tiene la función len() incorporada, pero escribirla por nosotros """
+input = input("Ingrese una cadena o una lista separada por comas: ")
+inputList = input.split(",")
+
+def cadenaOlista(input):
+    for elemento in input:
+      if elemento == ',':
+        print("La longitud de la lista es:", len(inputList))
+    else: 
+        print("La longitud de la lista es:", len(input))
 
 def len(lista):
     contador = 0
@@ -7,14 +16,5 @@ def len(lista):
         contador += 1
     return contador
 
-lista = float(input("Ingrese el número de lista: "))
 
-if lista == 1:
-    lista = ["apple", "banana", "cherry"]
-else :
-    lista = [1,2,3,4,5,6,7,8,9,4]
-    
-
-len = len(lista)
-
-print("La longitud de la lista es:", len)
+print(cadenaOlista(input))
